@@ -1,0 +1,36 @@
+/* Reseteo básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1e1e1e;
+  color: #ffffff;
+  font-family: "Open Sans", sans-serif;
+
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 40px 80px; /* Espaciado lateral para respirar */
+}
+
+h1 {
+  font-family: "Archivo Black", sans-serif;
+  font-size: 64px;
+  line-height: 1.1;
+  margin-bottom: 16px;
+}
+
+h2 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #cccccc;
+  margin-bottom: 40px;
+}
