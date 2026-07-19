@@ -1,36 +1,238 @@
-/* Reseteo básico */
 * {
   margin: 0;
-  padding: 0;
+  padding: 0px;
   box-sizing: border-box;
 }
 
 body {
-  background-color: #1e1e1e;
+  background-color: #0a0a0a;
   color: #ffffff;
   font-family: "Open Sans", sans-serif;
+  overflow-x: hidden;
+}
 
+.page-container {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 40px 80px; /* Espaciado lateral para respirar */
+  padding: 0 120px;
 }
 
-h1 {
+/*seccion intro*/
+
+.intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 120px;
+}
+
+.intro__contenido {
+  max-width: 60%;
+}
+
+.intro__titulo {
   font-family: "Archivo Black", sans-serif;
-  font-size: 64px;
+  font-size: 72px;
   line-height: 1.1;
-  margin-bottom: 16px;
-}
-
-h2 {
-  font-size: 18px;
-  font-weight: 600;
   margin-bottom: 24px;
 }
 
-p {
+.intro__subtitulo {
+  font-size: 20px;
+  font-weight: 600;
+  color: #e0e0e0;
+  margin-bottom: 32px;
+}
+
+.intro__descripcion {
   font-size: 16px;
   line-height: 1.5;
-  color: #cccccc;
+  color: #b3b3b3;
+  margin-bottom: 48px;
+}
+
+.intro__enlaces {
+  display: flex;
+  gap: 32px;
+}
+
+.enlace-perfil {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  padding-bottom: 4px;
+  background-image: linear-gradient(to right, #6d6dff, #00ff7b);
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-size: 0% 3px;
+  transition: background-size 0.3s ease;
+}
+
+.enlace-perfil:hover {
+  background-size: 100% 3px;
+}
+
+.intro__imagen {
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
+  background-color: #1e1e1e;
+  object-fit: cover;
+}
+
+/*seccion: habilidades*/
+
+.habilidades {
+  margin-bottom: 120px;
+}
+
+.habilidades__titulo {
+  font-size: 32px;
+  margin-bottom: 48px;
+}
+
+.habilidades__iconos {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.icono-habilidad {
+  height: 56px;
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+.icono-habilidad:hover {
+  transform: translateY(-5px);
+}
+
+/*seccion: proyectos*/
+.proyectos {
+  margin-bottom: 80px;
+}
+
+.proyectos__titulo {
+  font-size: 32px;
+  margin-bottom: 48px;
+}
+
+.proyectos__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.tarjeta {
+  background-color: #1a1a1a;
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.tarjeta__imagen-contenedor {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.tarjeta__imagen {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tarjeta__contenido {
+  padding: 40px;
+}
+
+.tarjeta__etiqueta {
+  color: #6d6dff;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.tarjeta__nombre {
+  font-size: 28px;
+  margin-bottom: 16px;
+}
+
+.tarjeta__descripcion {
+  font-size: 16px;
+  color: #b3b3b3;
+  line-height: 1.5;
+  margin-bottom: 32px;
+}
+
+.tarjeta__enlaces {
+  display: flex;
+  gap: 24px;
+}
+
+.enlace-proyecto {
+  color: #ffffff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.enlace-proyecto:hover {
+  color: #6d6dff;
+}
+
+/*Footer*/
+.contacto {
+  text-align: center;
+  padding: 60px 120px;
+  position: relative;
+  border-top: 1px solid #333;
+}
+
+.contacto::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  height: 800px;
+
+  background: radial-gradient(
+    circle,
+    rgba(109, 109, 255, 0.15) 0%,
+    rgba(109, 109, 255, 0) 60%
+  );
+  z-index: -1;
+  pointer-events: none;
+}
+
+.contacto__titulo {
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+
+.contacto__email {
+  font-size: 20px;
+  color: #6d6dff;
   margin-bottom: 40px;
+  font-weight: 600;
+}
+
+.contacto__redes {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+}
+
+.icono-red {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.icono-red:hover {
+  opacity: 0.5;
 }
