@@ -16,7 +16,10 @@ body {
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
-  padding: 120px 120px 0 120px;
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /*seccion intro*/
@@ -45,6 +48,12 @@ body {
   font-weight: 600;
   color: #e0e0e0;
   margin-bottom: 32px;
+}
+
+.intro__titulo,
+.intro__subtitulo,
+.intro__descripcion {
+  text-align: left;
 }
 
 .intro__descripcion {
@@ -78,11 +87,12 @@ body {
 .intro__imagen {
   content: "";
   position: absolute;
-  top: 50%;
+  top: 250px;
   left: 50%;
   transform: translate(0.5%, -50%);
-  width: 800px;
-  height: 800px;
+
+  width: 380px;
+  height: 380px;
 
   background: radial-gradient(
     circle,
@@ -257,4 +267,47 @@ body {
 
 .icono-red:hover {
   opacity: 0.5;
+}
+
+/*media queris 768*/
+@media (max-width: 1023px) {
+  .page-container {
+    width: 90%;
+  }
+
+  .intro {
+    display: grid;
+
+    grid-template-columns: 1fr 280px;
+    gap: 32px;
+    padding: 60px px 0 40px;
+    align-items: center;
+  }
+
+  .intro__contenido {
+    max-width: 100%;
+  }
+
+  .intro__titulo {
+    font-size: 56px;
+  }
+
+  .intro__enlaces {
+    justify-content: left;
+  }
+
+  .proyectos__grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  .intro__imagen {
+    top: 350px;
+  }
+
+  .foto-perfil {
+    width: 400px;
+    justify-content: center;
+
+    margin-left: 15%;
+  }
 }
