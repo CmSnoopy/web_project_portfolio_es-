@@ -9,12 +9,14 @@ body {
   color: #ffffff;
   font-family: "Open Sans", sans-serif;
   overflow-x: hidden;
+  min-height: 100vh;
 }
 
 .page-container {
+  width: 100%;
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0 120px;
+  padding: 120px 120px 0 120px;
 }
 
 /*seccion intro*/
@@ -24,6 +26,7 @@ body {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 120px;
+  padding: 80px 120px 0 120px;
 }
 
 .intro__contenido {
@@ -61,7 +64,7 @@ body {
   text-decoration: none;
   font-weight: 600;
   padding-bottom: 4px;
-  background-image: linear-gradient(to right, #6d6dff, #00ff7b);
+  background-image: linear-gradient(to right, #4c1a97, #6d6dff);
   background-repeat: no-repeat;
   background-position: bottom left;
   background-size: 0% 3px;
@@ -73,17 +76,35 @@ body {
 }
 
 .intro__imagen {
-  width: 380px;
-  height: 380px;
-  border-radius: 50%;
-  background-color: #1e1e1e;
-  object-fit: cover;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(0.5%, -50%);
+  width: 800px;
+  height: 800px;
+
+  background: radial-gradient(
+    circle,
+    rgba(109, 109, 255, 0.15) 0%,
+    rgba(109, 109, 255, 0) 60%
+  );
+  z-index: -1;
+  pointer-events: none;
+}
+
+.foto-perfil {
+  width: 600px;
+  justify-content: center;
+
+  margin-left: 15%;
 }
 
 /*seccion: habilidades*/
 
 .habilidades {
   margin-bottom: 120px;
+  padding: 0 120px;
 }
 
 .habilidades__titulo {
@@ -111,6 +132,7 @@ body {
 /*seccion: proyectos*/
 .proyectos {
   margin-bottom: 80px;
+  padding: 0 120px;
 }
 
 .proyectos__titulo {
@@ -187,9 +209,9 @@ body {
 /*Footer*/
 .contacto {
   text-align: center;
-  padding: 60px 120px;
+  padding: 60px 120px 20px 120px;
   position: relative;
-  border-top: 1px solid #333;
+  background: transparent;
 }
 
 .contacto::before {
@@ -212,7 +234,7 @@ body {
 
 .contacto__titulo {
   font-size: 32px;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
 }
 
 .contacto__email {
